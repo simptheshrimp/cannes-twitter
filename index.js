@@ -20,7 +20,7 @@ app.get('/', function(req, res) {
     client.get('search/tweets', {q: 'cannes2017'}, function(error, tweets, response) {
         res.render('index', {
             title: 'Festival De Cannes',
-            message: 'Welcome',
+            message: 'Festival De Cannes',
             tweets: tweets.statuses
         });
 
