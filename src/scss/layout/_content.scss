@@ -1,0 +1,21 @@
+.content {
+    text-align: center;
+
+    &--border {
+        border: solid 5px $baseColor2;
+    }
+
+    &__title {
+        color: $baseColor2;
+    }
+
+    &__img {
+        width: 200px;
+
+        &--small {
+            width: 100px;
+        }
+
+    }
+
+}

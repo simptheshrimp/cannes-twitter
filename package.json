@@ -4,11 +4,17 @@
   "description": "\"# cannes-twitter\"",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js"
+    "sass": "node-sass src/scss/main.scss --output-style compressed -o public/stylesheets/",
+    "autoprefixer": "postcss -u autoprefixer -r public/stylesheets/main.css",
+    "build:css": "npm run sass && npm run autoprefixer",
+    "watch:css": "onchange \"src/scss/**/*\" -- npm run build:css",
+    "nodemon": "nodemon index.js",
+    "start": "npm-run-all --parallel nodemon watch:*"
   },
   "dependencies": {
     "ejs": "2.5.6",
     "express": "4.15.2",
+    "nodemon": "^1.11.0",
     "pug": "^2.0.0-rc.1",
     "twitter": "^1.7.0"
   },
@@ -21,5 +27,12 @@
   "bugs": {
     "url": "https://github.com/xhkr/cannes-twitter/issues"
   },
-  "homepage": "https://github.com/xhkr/cannes-twitter#readme"
+  "homepage": "https://github.com/xhkr/cannes-twitter#readme",
+  "devDependencies": {
+    "autoprefixer": "^7.1.1",
+    "node-sass": "^4.5.3",
+    "npm-run-all": "^4.0.2",
+    "onchange": "^3.2.1",
+    "postcss-cli": "^4.0.0"
+  }
 }
