@@ -1,0 +1,25 @@
+{
+  "name": "cannes-twitter",
+  "version": "1.0.0",
+  "description": "\"# cannes-twitter\"",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "2.5.6",
+    "express": "4.15.2",
+    "pug": "^2.0.0-rc.1",
+    "twitter": "^1.7.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xhkr/cannes-twitter.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xhkr/cannes-twitter/issues"
+  },
+  "homepage": "https://github.com/xhkr/cannes-twitter#readme"
+}
