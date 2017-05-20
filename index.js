@@ -1,19 +1,14 @@
 var express = require('express');
 var app = express();
 var Twitter = require('twitter');
+var config = require('./config.js');
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.set('views', __dirname + '/views');
 app.set('view engine', 'pug');
 
-// views is directory for all template files
-var client = new Twitter({
-    consumer_key: 'fhtnTOSL0s4hzf8nApG1jreWV',
-    consumer_secret: 'aeLFEQu6zuxqePHFfMbQGz7p1qkInYnCJlmLrwHIa92BGmhs1u',
-    access_token_key: '864443637865885696-m0lCyYKvP17fqX0E79LWCd1Z1jtm051',
-    access_token_secret: 'E9HaMxIf6PIR2OwT4ZF9fxweEwZmZiw1XwqvpRtMNykMM'
-});
+var client = new Twitter(config);
 
 app.get('/', function(req, res) {
 
