@@ -1,7 +1,7 @@
 var express = require('express');
 var app = express();
 var Twitter = require('twitter');
-var config = require('./config');
+//var config = require('./config');
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
