@@ -2,7 +2,7 @@
 node_modules
 npm-debug.log
 public/stylesheets
-
+config.js
 # Local development
 *.env
 *.dev
