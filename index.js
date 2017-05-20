@@ -10,15 +10,11 @@ app.set('view engine', 'pug');
 var env = process.env.NODE_ENV || 'development';
 
 if (env === 'development') {
-    var config = require('./config');
+    var config = require('./config/config');
     var client = new Twitter(config);
 } else if (env === 'production'){
-    var client = new Twitter({
-        consumer_key: process.env.consumer_key,
-        consumer_secret: process.env.consumer_secret,
-        access_token_key: process.env.access_token,
-        access_token_secret: process.env.access_token_secret
-    });
+    var config = require('./config/config_prod');
+    var client = new Twitter(config);
 };
 
 app.get('/', function(req, res) {
