@@ -1,20 +1,44 @@
-.content {
-    text-align: center;
+.feed {
+    margin: 0 auto;
+    max-width: 400px;
+}
 
-    &--border {
-        border: solid 5px $baseColor2;
+.tweet {
+    border: 5px solid #fff;
+    margin-bottom: 50px;
+}
+
+
+.tweet-user {
+
+    &__img {
+
     }
 
-    &__title {
-        color: $baseColor2;
+    &__created {
+
+    }
+
+}
+
+.tweet-content {
+
+    &__text {
     }
 
     &__img {
-        width: 200px;
+        width: 100%;
+    }
 
-        &--small {
-            width: 100px;
-        }
+}
+
+.tweet-info {
+
+    &__rt {
+
+    }
+
+    &__likes {
 
     }
 

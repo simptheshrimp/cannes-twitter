@@ -19,7 +19,7 @@ if (env === 'development') {
 
 app.get('/', function(req, res) {
 
-    client.get('search/tweets', {q: 'cannes2017'}, function(error, tweets, response) {
+    client.get('search/tweets', {q: 'cannes2017', result_type: 'popular', count: 10}, function(error, tweets, response) {
         res.render('index', {
             title: 'Festival De Cannes',
             message: 'Festival De Cannes',

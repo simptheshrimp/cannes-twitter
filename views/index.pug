@@ -3,6 +3,24 @@ html
     include head.pug
     body
         h1= message
-        ul
+        
+        div.feed
+            
             each tweet in tweets
-                li= tweet.text
+                
+                div.tweet
+                    
+                    div.tweet-user
+                        img.tweet-user__img(src=tweet.user.profile_image_url)
+                        span.tweet-user__account= tweet.user.name
+                        p.tweet-user__created= tweet.created_at
+                    
+                    div.tweet-content
+                        if tweet.entities.media && tweet.entities.media.length > 0
+                            img.tweet-content__img(src=tweet.entities.media[0].media_url)
+                        p.tweet-content__text= tweet.text
+
+
+                    div.tweet-info
+                        p.tweet-info__rt= 'Number of retweets: ' + tweet.retweet_count
+                        p.tweet-info__likes= 'Likes: ' + tweet.favorite_count
