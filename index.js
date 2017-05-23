@@ -28,9 +28,13 @@ stream.on('tweet', function (tweet) {
 
 app.get('/', function(req, res) {
 
-    res.render('index', {
-        title: 'Festival De Cannes',
-        message: 'Festival De Cannes'
+    t.get('search/tweets', {q: 'cannes2017', result_type: 'popular', count: 10}, function(error, tweets, response) {
+        res.render('index', {
+            title: 'Festival De Cannes',
+            desc: '#cannes2017',
+            tweets: tweets.statuses
+        });
+
     });
 
 });

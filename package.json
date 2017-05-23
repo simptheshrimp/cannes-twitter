@@ -10,7 +10,7 @@
     "browser-sync": "browser-sync start --proxy localhost:8080 --files \"public/**/*\"",
     "watch:css": "onchange \"src/scss/**/*\" -- npm run build:css",
     "nodemon": "nodemon index.js",
-    "start": "npm run nodemon"
+    "start": "npm-run-all --parallel nodemon browser-sync watch:*"
   },
   "dependencies": {
     "express": "4.15.2",

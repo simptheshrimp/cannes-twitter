@@ -1,21 +1,19 @@
-.content {
-    text-align: center;
+.main {
+    display: flex;
+    justify-content: space-between;
+}
 
-    &--border {
-        border: solid 5px $baseColor2;
-    }
+.feed-popular-container {
+    max-width: 300px;
+}
 
-    &__title {
-        color: $baseColor2;
-    }
+.feed-live-container {
+    max-width: 300px;
+    background: #100f0f;
+}
 
+.tweet-popular-content {
     &__img {
-        width: 200px;
-
-        &--small {
-            width: 100px;
-        }
-
+        width: 100%;
     }
-
 }

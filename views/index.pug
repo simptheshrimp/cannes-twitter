@@ -2,9 +2,40 @@ doctype html
 html
     include head.pug
     body
-        h1= message
+        h1= desc
         
-        div.feed
-        
+        main.main
+            div.popular-section
+                
+                header.title-border
+                    h2= 'Popular Tweets'
+                    
+                div.feed-popular-container
+                    
+                    each tweet in tweets
+                        
+                        div.tweet-popular
+                            
+                            div.tweet-popular-header
+                                img.tweet-popular-header__icon(src=tweet.user.profile_image_url)
+                                span.tweet-popular-header__user= tweet.user.name
+                            
+                            div.tweet-popular-content
+                                if tweet.entities.media && tweet.entities.media.length > 0
+                                    img.tweet-popular-content__img(src=tweet.entities.media[0].media_url)
+                                p.tweet-popular-content__text= tweet.text
+
+
+                            div.tweet-popular-footer
+                                p.tweet-popular-footer__likes= 'Number of retweets: ' + tweet.favorite_count
+                                p.tweet-popular-footer__retweets= 'Likes: ' + tweet.retweet_count
+            
+            div.live-section
+                
+                header.title-border
+                    h2= 'Live'      
+                      
+                div.feed-live-container
+             
         script(src='/socket.io/socket.io.js')
         script(src='/js/main.js')
