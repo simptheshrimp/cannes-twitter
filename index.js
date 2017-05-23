@@ -33,7 +33,8 @@ app.get('/', function(req, res) {
 
     res.render('index', {
         title: 'Festival De Cannes',
-        message: 'Festival De Cannes'
+        message: 'Festival De Cannes',
+        port: app.get('port')
     });
 
 });
