@@ -1,6 +1,3 @@
-// var express = require('express');
-// var app = express();
-// var Twitter = require('twitter');
 var express = require('express');
 var app = express();
 var server = require('http').Server(app);
@@ -23,7 +20,7 @@ if (env === 'development') {
     var t = new twit(config);
 };
 
-var stream = t.stream('statuses/filter', { track: 'cannes2017' })
+var stream = t.stream('statuses/filter', { track: 'cannes2017', language: 'en' })
 
 stream.on('tweet', function (tweet) {
     io.emit('tweet', tweet);
