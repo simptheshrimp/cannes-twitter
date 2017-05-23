@@ -2,7 +2,7 @@ doctype html
 html
     include head.pug
     body
-        h1= message
+        h1.fdc= message
         
         div.feed
             
@@ -13,14 +13,17 @@ html
                     div.tweet-user
                         img.tweet-user__img(src=tweet.user.profile_image_url)
                         span.tweet-user__account= tweet.user.name
-                        p.tweet-user__created= tweet.created_at
+                        p.tweet-user__text= tweet.text
+                        
                     
                     div.tweet-content
                         if tweet.entities.media && tweet.entities.media.length > 0
                             img.tweet-content__img(src=tweet.entities.media[0].media_url)
-                        p.tweet-content__text= tweet.text
+                        
 
 
                     div.tweet-info
+                        p.tweet-info__created= tweet.created_at
                         p.tweet-info__rt= 'Number of retweets: ' + tweet.retweet_count
                         p.tweet-info__likes= 'Likes: ' + tweet.favorite_count
+                        

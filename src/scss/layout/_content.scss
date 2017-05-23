@@ -1,38 +1,83 @@
+.fdc {
+    background: $headerColor;
+    color: $headerFont;
+    margin: 0 0 20px;
+    padding: 1%;
+    font-family: "Kumar One";
+    text-shadow: 0 0 10px yellow;
+    text-decoration: underline;
+}
+
 .feed {
-    margin: 0 auto;
-    max-width: 400px;
+    width: 80%;
+    padding: 30px;
+    border-right: 4px solid black;
 }
 
 .tweet {
-    border: 5px solid #fff;
-    margin-bottom: 50px;
+    
 }
 
 
 .tweet-user {
-
+    display: flex;
+    
     &__img {
-
+        border-radius: 50%;
+        width: 70px;
     }
 
-    &__created {
+    &__account {
+        margin-left: 10px;
+        text-decoration: underline;
+        align-self: flex-end;
+        order: 2;
+    }
 
+    &__text {
+        display: inline-block;
+        margin-left: 20px;
+        vertical-align: bottom;
+        background: lightblue;
+        border-radius: 20px;
+        padding: 10px 20px;
     }
 
 }
 
-.tweet-content {
-
-    &__text {
-    }
+.tweet-user:nth-child(odd) {
+    justify-content: flex-end;
 
     &__img {
-        width: 100%;
+            order: 3;
+    }
+
+}
+
+.tweet-user:nth-child(even) {
+    justify-content: flex-start;
+
+    &__img {
+            order: 1;
+    }
+}
+
+.tweet-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__img {
+        width: 30%;
+
     }
 
 }
 
 .tweet-info {
+    font-weight: bold;
+    text-align: right;
+    text-decoration: overline;
 
     &__rt {
 
