@@ -1,6 +1,7 @@
 body {
     font-family: 'Raleway', sans-serif;
-    background: $baseColor;
+    background: url("../img/cannes.jpg") center center fixed;
+    background-size: cover;
     color: $baseColor2;
     font-weight: bold;
 }

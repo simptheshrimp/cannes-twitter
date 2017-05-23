@@ -19,3 +19,18 @@
     }
 
 }
+
+.move-center {
+    display: flex;
+    justify-content: center;
+
+    .top_hash {
+        border: 5px solid pink;
+        padding: 30px;
+        background: rgba(128, 128, 128, 0.85);
+
+        li {
+            list-style-type: none;
+        }
+    }
+}
