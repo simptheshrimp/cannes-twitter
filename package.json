@@ -7,16 +7,18 @@
     "sass": "node-sass src/scss/main.scss --output-style compressed -o public/stylesheets/",
     "autoprefixer": "postcss -u autoprefixer -r public/stylesheets/main.css",
     "build:css": "npm run sass && npm run autoprefixer",
-    "browser-sync": "browser-sync start --proxy localhost:5000 --files \"public/**/*\"",
+    "browser-sync": "browser-sync start --proxy localhost:8080 --files \"public/**/*\"",
     "watch:css": "onchange \"src/scss/**/*\" -- npm run build:css",
     "nodemon": "nodemon index.js",
-    "start": "npm-run-all --parallel nodemon browser-sync watch:*"
+    "start": "npm run nodemon"
   },
   "dependencies": {
     "express": "4.15.2",
+    "http": "0.0.0",
     "nodemon": "^1.11.0",
     "pug": "^2.0.0-rc.1",
-    "twitter": "^1.7.0"
+    "socket.io": "^2.0.1",
+    "twit": "^2.2.5"
   },
   "repository": {
     "type": "git",
