@@ -1,14 +1,25 @@
 .main {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
+    @include sizeDesktop {
+        flex-direction: row;
+    }
+
 }
 
 .feed-popular-container {
-    max-width: 300px;
+    width: 100%;
+    @include sizeDesktop {
+        width: 612px;
+    }
 }
 
 .feed-live-container {
-    max-width: 300px;
+    width: 100%;
+    @include sizeDesktop {
+        width: 412px;
+    }
     background: #100f0f;
 }
 

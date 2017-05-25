@@ -1,6 +1,12 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
+    font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
     background: $baseColor;
     color: $baseColor2;
     font-weight: bold;
+    margin: 0;
 }

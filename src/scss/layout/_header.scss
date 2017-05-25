@@ -1,3 +1,27 @@
+.header {
+    width: 100%;
+    background: blue;
+
+    &__img {
+        width: 200px;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    &__title {
+        color: $cannesGold;
+        font-size: 4.0rem;
+        display: inline-block;
+        vertical-align: middle;
+        @include sizeDesktop {
+            margin-left: 20px;
+        }
+    }
+
+}
+
+
 .title-border {
     background: $cannesGold;
+    text-align: center;
 }

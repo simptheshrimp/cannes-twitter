@@ -2,7 +2,10 @@ doctype html
 html
     include head.pug
     body
-        h1= desc
+        
+        header.header
+            img.header__img(src='img/logo.svg')
+            h1.header__title= desc
         
         main.main
             div.popular-section
