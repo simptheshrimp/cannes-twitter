@@ -5,8 +5,15 @@ html {
 body {
     font-size: 1.6rem;
     font-family: 'Raleway', sans-serif;
-    background: $baseColor;
-    color: $baseColor2;
+    color: black;
     font-weight: bold;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
     margin: 0;
 }

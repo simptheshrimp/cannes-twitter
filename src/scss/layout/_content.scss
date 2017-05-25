@@ -1,7 +1,7 @@
 .main {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    //justify-content: space-around;
     @include sizeDesktop {
         flex-direction: row;
     }
@@ -10,21 +10,40 @@
 
 .feed-popular-container {
     width: 100%;
-    @include sizeDesktop {
-        width: 612px;
-    }
 }
 
 .feed-live-container {
     width: 100%;
-    @include sizeDesktop {
-        width: 412px;
-    }
-    background: #100f0f;
+}
+
+.tweet-popular {
+    padding: 0 60px;
+    margin-bottom: 50px;
+}
+
+.tweet-popular-footer {
+    border-bottom: 5px solid $cannesGold;
+}
+
+.tweet-live {
+    display: flex;
+    margin: 0 auto;
+    width: 300px;
+    margin: 0 30px;
+    margin-bottom: 20px;
 }
 
 .tweet-popular-content {
     &__img {
         width: 100%;
     }
+}
+
+.tweet-live-icon {
+    background: $cannesGold;
+}
+
+.tweet-live-content {
+    padding: 0 20px;
+    background: $cannesGold;
 }

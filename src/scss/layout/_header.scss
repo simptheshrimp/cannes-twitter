@@ -1,8 +1,9 @@
 .header {
     width: 100%;
-    background: blue;
+    padding: 10px 0;
 
     &__img {
+        padding-left: 10px;
         width: 200px;
         display: inline-block;
         vertical-align: middle;
@@ -13,9 +14,8 @@
         font-size: 4.0rem;
         display: inline-block;
         vertical-align: middle;
-        @include sizeDesktop {
-            margin-left: 20px;
-        }
+        margin-left: 20px;
+
     }
 
 }
@@ -24,4 +24,10 @@
 .title-border {
     background: $cannesGold;
     text-align: center;
+    padding: 20px 0;
+    margin-bottom: 40px;
+
+    &__title {
+        color: #fff;
+    }
 }
