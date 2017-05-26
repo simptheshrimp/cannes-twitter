@@ -1,4 +1,4 @@
-window.addEventListener("load", function () {
+window.addEventListener('load', function () {
 
     var socket = io.connect('/');
 
@@ -11,12 +11,12 @@ window.addEventListener("load", function () {
         tweetContainer.className = 'tweet-live';
 
         // Add content
-        var html = '<div class="tweet-live-icon">';
+        var html = '<div class="tweet-live-header">';
             html += '<img class="tweet-live-header__icon" src="' + tweet.user.profile_image_url + '">';
+            html += '<span class="tweet-live-header__user"> ' + tweet.user.name + '</span>';
             html += '</div>';
 
             html += '<div class="tweet-live-content">';
-            html += '<span class="tweet-live-header__user">' + tweet.user.name + '</span>';
             html += '<p class="tweet-content__text">' + tweet.text + '</p>';
             html += '</div>';
 

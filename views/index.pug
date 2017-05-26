@@ -30,14 +30,18 @@ html
 
 
                             div.tweet-popular-footer
-                                p.tweet-popular-footer__likes= 'Number of retweets: ' + tweet.favorite_count
-                                p.tweet-popular-footer__retweets= 'Likes: ' + tweet.retweet_count
+                                div.tweet-popular-footer__section
+                                    img.tweet-popular-footer__icon(src='img/likes.svg' alt='likes')
+                                    span.tweet-popular-footer__text= tweet.favorite_count
+                                div.tweet-popular-footer__section
+                                    img.tweet-popular-footer__icon(src='img/rt.svg' alt='retweets')
+                                    span.tweet-popular-footer__text= tweet.retweet_count
             
             div.live-section
                 
                 header.title-border
                     h2.title-border__title= 'Live'      
-                      
+                    
                 div.feed-live-container
                     div.tweet-live.tweet-live--loading
                         div.tweet-live-content
