@@ -39,6 +39,9 @@ html
                     h2.title-border__title= 'Live'      
                       
                 div.feed-live-container
+                    div.tweet-live.tweet-live--loading
+                        div.tweet-live-content
+                            p.tweet-content__text= 'Loading tweets...'
              
         script(src='/socket.io/socket.io.js')
         script(src='/js/main.js')
