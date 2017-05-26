@@ -1,9 +1,10 @@
 .footer {
-    background: $twitter;
-    padding: 10px 0;
+    background: $cannesDark;
+    text-align: center;
 
     &__icon {
-        display: block;
-        margin: 0 auto;
+        vertical-align: middle;
+        width: 80px;
+        padding: 20px 0;
     }
 }
