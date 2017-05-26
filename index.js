@@ -20,7 +20,7 @@ if (env === 'development') {
     var t = new twit(config);
 };
 
-var stream = t.stream('statuses/filter', { track: 'cannes2017', language: 'en' })
+var stream = t.stream('statuses/filter', { track: 'cannes2017' })
 
 stream.on('tweet', function (tweet) {
     io.emit('tweet', tweet);
