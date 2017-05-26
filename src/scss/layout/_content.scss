@@ -41,9 +41,17 @@
 }
 
 .tweet-popular-header {
+
+    margin-bottom: 10px;
+
     &__user {
         font-weight: bold;
         color: $cannesGold;
+        vertical-align: middle;
+    }
+    &__icon {
+        border-radius: 48px;
+        vertical-align: middle;
     }
 }
 
@@ -71,25 +79,36 @@
 }
 
 .tweet-live {
-    &--loading {
-        text-align: center;
-        color: #fff;
-        background: $twitter;
-        border: 2px solid $twitter;
-    }
+    display: flex;
     box-sizing: border-box;
     margin: 0 auto;
     width: 100%;
-    border: 2px solid $cannesGold;
     border-radius: 5px;
     margin-bottom: 20px;
 
+    &--loading {
+        display: block;
+        text-align: center;
+        width: 150px;
+        color: #fff;
+        background: $cannesGold;
+    }
 }
 
 .tweet-live-content {
-    &__text {
-        padding: 0 20px;
-        font-size: 1.4rem;
+    border: 2px solid $cannesGold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+
+    &--loading {
+        padding: 5px 10px;
+        border: none;
+    }
+
+    &__user {
+        color: $cannesGold;
+        font-weight: bold;
     }
 }
 
@@ -103,8 +122,8 @@
 }
 
 .tweet-live-header {
-    &__user {
-        font-weight: bold;
-        color: $cannesGold;
+    padding-right: 5px;
+    &__icon {
+        border-radius: 48px;
     }
 }

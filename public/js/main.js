@@ -13,10 +13,10 @@ window.addEventListener('load', function () {
         // Add content
         var html = '<div class="tweet-live-header">';
             html += '<img class="tweet-live-header__icon" src="' + tweet.user.profile_image_url + '">';
-            html += '<span class="tweet-live-header__user"> ' + tweet.user.name + '</span>';
             html += '</div>';
 
             html += '<div class="tweet-live-content">';
+            html += '<span class="tweet-live-content__user"> ' + tweet.user.name + '</span>';
             html += '<p class="tweet-live-content__text">' + tweet.text + '</p>';
             html += '</div>';
 
