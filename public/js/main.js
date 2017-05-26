@@ -1,25 +1,29 @@
-var socket = io.connect('/');
+window.addEventListener("load", function () {
 
-socket.on('tweet', function (tweet) {
-    // Get feed container
-    var feedContainer = document.querySelector('.feed-live-container');
+    var socket = io.connect('/');
 
-    // Create tweet container
-    var tweetContainer = document.createElement('div');
-    tweetContainer.className = 'tweet-live';
+    socket.on('tweet', function (tweet) {
+        // Get feed container
+        var feedContainer = document.querySelector('.feed-live-container');
 
-    // Add content
-    var html = '<div class="tweet-live-icon">';
-        html += '<img class="tweet-live-header__icon" src="' + tweet.user.profile_image_url + '">';
-        html += '</div>';
+        // Create tweet container
+        var tweetContainer = document.createElement('div');
+        tweetContainer.className = 'tweet-live';
 
-        html += '<div class="tweet-live-content">';
-        html += '<span class="tweet-live-header__user">' + tweet.user.name + '</span>';
-        html += '<p class="tweet-content__text">' + tweet.text + '</p>';
-        html += '</div>';
+        // Add content
+        var html = '<div class="tweet-live-icon">';
+            html += '<img class="tweet-live-header__icon" src="' + tweet.user.profile_image_url + '">';
+            html += '</div>';
 
-    tweetContainer.innerHTML = html;
-    feedContainer.insertBefore( tweetContainer, feedContainer.firstChild );
+            html += '<div class="tweet-live-content">';
+            html += '<span class="tweet-live-header__user">' + tweet.user.name + '</span>';
+            html += '<p class="tweet-content__text">' + tweet.text + '</p>';
+            html += '</div>';
 
-    console.log(tweet.text);
+        tweetContainer.innerHTML = html;
+        feedContainer.insertBefore( tweetContainer, feedContainer.firstChild );
+
+        console.log(tweet.text);
+    });
+
 });
