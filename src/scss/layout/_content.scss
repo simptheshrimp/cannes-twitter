@@ -89,9 +89,11 @@
     &--loading {
         display: block;
         text-align: center;
-        width: 150px;
+        float: right;
+        width: calc(100% - 53px);
         color: #fff;
         background: $cannesGold;
+        border: none;
     }
 }
 
