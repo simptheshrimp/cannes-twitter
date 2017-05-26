@@ -19,7 +19,7 @@ socket.on('tweet', function (tweet) {
         html += '</div>';
 
     tweetContainer.innerHTML = html;
-    feedContainer.prepend(tweetContainer);
+    feedContainer.insertBefore( tweetContainer, feedContainer.firstChild );
 
     console.log(tweet.text);
 });
