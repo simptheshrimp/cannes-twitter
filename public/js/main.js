@@ -17,13 +17,11 @@ window.addEventListener('load', function () {
             html += '</div>';
 
             html += '<div class="tweet-live-content">';
-            html += '<p class="tweet-content__text">' + tweet.text + '</p>';
+            html += '<p class="tweet-live-content__text">' + tweet.text + '</p>';
             html += '</div>';
 
         tweetContainer.innerHTML = html;
         feedContainer.insertBefore( tweetContainer, feedContainer.firstChild );
-
-        console.log(tweet.text);
     });
 
 });

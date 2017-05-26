@@ -21,7 +21,7 @@ html
                             
                             div.tweet-popular-header
                                 img.tweet-popular-header__icon(src=tweet.user.profile_image_url)
-                                span.tweet-popular-header__user= tweet.user.name
+                                span.tweet-popular-header__user= ' ' +  tweet.user.name
                             
                             div.tweet-popular-content
                                 if tweet.entities.media && tweet.entities.media.length > 0

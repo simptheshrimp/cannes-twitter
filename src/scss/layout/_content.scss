@@ -40,6 +40,13 @@
     }
 }
 
+.tweet-popular-header {
+    &__user {
+        font-weight: bold;
+        color: $cannesGold;
+    }
+}
+
 .tweet-popular-footer {
     border-bottom: 5px solid $cannesGold;
 
@@ -76,11 +83,22 @@
     border: 2px solid $cannesGold;
     border-radius: 5px;
     margin-bottom: 20px;
+
+}
+
+.tweet-live-content {
+    &__text {
+        padding: 0 20px;
+        font-size: 1.4rem;
+    }
 }
 
 .tweet-popular-content {
     &__img {
         width: 100%;
+    }
+    &__text {
+        font-size: 1.4rem;
     }
 }
 
