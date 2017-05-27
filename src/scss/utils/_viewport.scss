@@ -1,0 +1,11 @@
+@mixin sizeTablet {
+    @media (min-width: #{$widthTablet}) and (max-width: #{$widthDesktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin sizeDesktop {
+    @media (min-width: #{$widthDesktop}) {
+        @content;
+    }
+}

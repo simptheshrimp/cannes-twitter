@@ -2,15 +2,58 @@ doctype html
 html
     include head.pug
     body
+
         h1= message
         ul
             each tweet in tweets
                 li= tweet.text
-        .move-center
-            ul.top_hash
-                li Fabian Bengtsson
-                li Målar-Mohammed
-                li Markoolio
-                li Scooby Doo
-                li Gammel Smurfen
-                li Turbo Kenta
+        
+        header.header
+            img.header__img(src='img/logo.svg')
+            h1.header__title= desc
+        
+        main.main
+            div.popular-section
+                
+                header.title-border
+                    h2.title-border__title= 'Popular Tweets'
+                    
+                div.feed-popular-container
+                    
+                    each tweet in tweets
+                        
+                        div.tweet-popular
+                            
+                            div.tweet-popular-header
+                                img.tweet-popular-header__icon(src=tweet.user.profile_image_url)
+                                span.tweet-popular-header__user= ' ' +  tweet.user.name
+                            
+                            div.tweet-popular-content
+                                if tweet.entities.media && tweet.entities.media.length > 0
+                                    img.tweet-popular-content__img(src=tweet.entities.media[0].media_url)
+                                p.tweet-popular-content__text= tweet.text
+
+
+                            div.tweet-popular-footer
+                                div.tweet-popular-footer__section
+                                    img.tweet-popular-footer__icon(src='img/likes.svg' alt='likes')
+                                    span.tweet-popular-footer__text= tweet.favorite_count
+                                div.tweet-popular-footer__section
+                                    img.tweet-popular-footer__icon(src='img/rt.svg' alt='retweets')
+                                    span.tweet-popular-footer__text= tweet.retweet_count
+            
+            div.live-section
+                
+                header.title-border
+                    h2.title-border__title= 'Live'      
+                    
+                div.feed-live-container
+                    div.tweet-live.tweet-live--loading
+                        div.tweet-live-content--loading
+                            p.tweet-content__text= 'Loading tweets...'
+        
+        footer.footer
+            img.footer__icon(src='img/team_fedora.svg' alt='team fedora')
+        
+        script(src='/socket.io/socket.io.js')
+        script(src='/js/main.js')

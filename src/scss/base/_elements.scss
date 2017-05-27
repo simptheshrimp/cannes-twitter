@@ -1,7 +1,29 @@
+html {
+    font-size: 62.5%;
+}
+
 body {
-    font-family: 'Raleway', sans-serif;
-    background: url("../img/cannes.jpg") center center fixed;
-    background-size: cover;
-    color: $baseColor2;
-    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    color: black;
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+h2 {
+    margin: 0;
+}
+
+::-webkit-scrollbar
+{
+  width: 12px;  /* for vertical scrollbars */
+  height: 12px; /* for horizontal scrollbars */
+}
+
+::-webkit-scrollbar-thumb
+{
+  background: $cannesDark;
 }

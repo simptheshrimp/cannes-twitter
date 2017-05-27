@@ -1,0 +1,10 @@
+.footer {
+    background: $cannesDark;
+    text-align: center;
+
+    &__icon {
+        vertical-align: middle;
+        width: 80px;
+        padding: 20px 0;
+    }
+}

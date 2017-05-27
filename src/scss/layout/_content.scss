@@ -1,23 +1,134 @@
-.content {
-    text-align: center;
-
-    &--border {
-        border: solid 5px $baseColor2;
+.main {
+    display: flex;
+    flex-direction: column;
+    @include sizeDesktop {
+        flex-direction: row;
     }
+}
 
-    &__title {
-        color: $baseColor2;
+.live-section {
+    width: 100%;
+    @include sizeDesktop {
+        width: 40%;
     }
+}
 
-    &__img {
-        width: 200px;
+.popular-section {
+    width: 100%;
+    @include sizeDesktop {
+        width: 60%;
+    }
+}
 
-        &--small {
-            width: 100px;
+.feed-live-container {
+    margin: 0 auto;
+    width: 80%;
+    height: 700px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-right: 10px;
+    @include sizeDesktop {
+        width: 400px;
+    }
+}
+
+.tweet-popular {
+    padding: 0 30px;
+    margin-bottom: 100px;
+    @include sizeDesktop {
+        padding: 0 60px;
+    }
+}
+
+.tweet-popular-header {
+
+    margin-bottom: 10px;
+
+    &__user {
+        font-weight: bold;
+        color: $cannesGold;
+        vertical-align: middle;
+    }
+    &__icon {
+        border-radius: 48px;
+        vertical-align: middle;
+    }
+}
+
+.tweet-popular-footer {
+    border-bottom: 5px solid $cannesGold;
+
+    &__section {
+        display: inline-block;
+        &:first-child {
+            padding-right: 20px;
         }
-
     }
 
+    &__text {
+        font-size: 2.0rem;
+        vertical-align: middle;
+        padding-left: 5px;
+    }
+
+
+    &__icon {
+        vertical-align: middle;
+        line-height: 2.4rem;
+    }
+}
+
+.tweet-live {
+    display: flex;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    &--loading {
+        display: block;
+        text-align: center;
+        float: right;
+        width: calc(100% - 53px);
+        color: #fff;
+        background: $cannesGold;
+        border: none;
+    }
+}
+
+.tweet-live-content {
+    border: 2px solid $cannesGold;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 1.4rem;
+    flex-grow: 1;
+
+    &--loading {
+        padding: 5px 10px;
+        border: none;
+    }
+
+    &__user {
+        color: $cannesGold;
+        font-weight: bold;
+    }
+}
+
+.tweet-popular-content {
+    &__img {
+        width: 100%;
+    }
+    &__text {
+        font-size: 1.4rem;
+    }
+}
+
+.tweet-live-header {
+    padding-right: 5px;
+    &__icon {
+        border-radius: 48px;
+    }
 }
 
 .move-center {
