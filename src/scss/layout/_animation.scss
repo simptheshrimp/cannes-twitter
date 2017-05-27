@@ -1,0 +1,13 @@
+.tweet-live {
+    animation: slider 1s ease-in-out;
+    position: relative;
+}
+
+@keyframes slider {
+    0% {
+        transform: translateX(600px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
